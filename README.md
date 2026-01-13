@@ -28,22 +28,6 @@ Cardápio digital interativo desenvolvido para a **Gastronomia Sonho**, um proje
 - 📱 **100% Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
 - ⚡ **Performance**: Carregamento rápido e transições suaves
 
-## 🚀 Demo
-
-[🔗 Ver Demonstração ao Vivo](#) _(adicione o link do GitHub Pages aqui)_
-
-## 🖼️ Screenshots
-
-<div align="center">
-  <img src="screenshots/desktop.png" alt="Desktop View" width="600px">
-  <p><em>Visualização Desktop</em></p>
-  
-  <img src="screenshots/modal.png" alt="Modal de Personalização" width="600px">
-  <p><em>Modal de Personalização de Pratos</em></p>
-  
-  <img src="screenshots/mobile.png" alt="Mobile View" width="300px">
-  <p><em>Visualização Mobile</em></p>
-</div>
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -186,7 +170,7 @@ Crie um arquivo chamado LICENSE na raiz:
 
 MIT License
 
-Copyright (c) 2024 [Seu Nome]
+Copyright (c) 2026 [Karla Castro]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

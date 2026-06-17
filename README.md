@@ -1,191 +1,142 @@
-# Cardapio-Interativo
+#  Cardápio Digital Interativo
 
-# 🍽️ Cardápio Digital Interativo - Gastronomia Sonho
+Cardápio digital da **Gastronomia Sonho** desenvolvido com **React + Vite**. O projeto permite visualizar pratos, personalizar pedidos, acompanhar o carrinho em tempo real e acessar uma área de configuração para editar os itens do cardápio.
 
-<div align="center">
-  
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## Visão Geral
 
-</div>
+Esta aplicação foi pensada para atender o fluxo de um restaurante pequeno ou médio, com foco em:
 
-## 📋 Sobre o Projeto
+- navegação rápida pelo cardápio
+- personalização de pedidos
+- envio do pedido via WhatsApp
+- painel de configuração para edição dos pratos
+- persistência local das alterações no navegador
 
-Cardápio digital interativo desenvolvido para a **Gastronomia Sonho**, um projeto de um amigo empreendedor no ramo gastronômico. A aplicação permite que clientes visualizem o menu completo, personalizem seus pedidos e acompanhem o valor total em tempo real.
+## Funcionalidades
 
-### ✨ Funcionalidades
+- Catálogo com categorias: entradas, massas e sobremesas
+- Modal de detalhes com adicionais, quantidade e nível de tempero
+- Carrinho lateral com subtotal, extras e total geral
+- Envio do pedido via WhatsApp
+- Painel de configuração com senha para editar pratos
+- Cadastro, edição e exclusão de itens do cardápio
+- Salvamento automático em `localStorage`
+- Interface responsiva para desktop e mobile
 
-- 🍴 **Catálogo Completo**: Entradas, massas e sobremesas organizadas por categoria
-- 🎨 **Interface Elegante**: Design moderno com paleta sofisticada
-- ⚙️ **Personalização de Pedidos**: 
-  - Adição de proteínas extras
-  - Seleção de níveis de tempero
-  - Ajuste de quantidades
-- 🏷️ **Tags Alimentares**: Indicadores de vegetariano, sem glúten, sem lactose
-- 🛒 **Carrinho Inteligente**: Cálculo automático de totais e subtotais
-- 📱 **100% Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
-- ⚡ **Performance**: Carregamento rápido e transições suaves
+## Tecnologias Utilizadas
 
+- **React 18**
+- **Vite**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **localStorage** para persistência local
 
-## 🛠️ Tecnologias Utilizadas
+## Estrutura do Projeto
 
-### Frontend
-- **HTML5** - Estruturação semântica
-- **CSS3** - Estilização avançada
-- **JavaScript (ES6+)** - Lógica e interatividade
-- **Tailwind CSS** - Framework CSS utilitário
-
-### Tipografia
-- **Playfair Display** - Fonte display para títulos
-- **Inter** - Fonte sans-serif para corpo de texto
-
-### Ferramentas
-- Git & GitHub
-- VS Code
-- Chrome DevTools
-
-## 📂 Estrutura do Projeto
-
+```bash
 cardapio-digital/
-│
-├── index.html          # Arquivo principal
-├── README.md           # Documentação
-├── screenshots/        # Imagens do projeto
-│   ├── desktop.png
-│   ├── modal.png
-│   └── mobile.png
-└── LICENSE            # Licença do projeto
+├── index.html
+├── package.json
+├── vite.config.js
+├── README.md
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── styles.css
+│   └── data/
+│       └── menuItems.js
+└── node_modules/
+```
 
-
-## 💻 Como Usar
+## Como Executar
 
 ### Pré-requisitos
 
-Apenas um navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Node.js instalado
+- npm instalado
 
 ### Instalação
 
-1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/cardapio-digital.git
+npm install
+```
 
-Navegue até o diretório
-cd cardapio-digital
+### Desenvolvimento
 
-Abra o arquivo index.html no navegador
-# No Windows
-start index.html
+```bash
+npm run dev
+```
 
-# No macOS
-open index.html
+A aplicação ficará disponível em:
 
-# No Linux
-xdg-open index.html
+```bash
+http://localhost:5173/
+```
 
-Ou simplesmente arraste o arquivo index.html para o navegador.
+### Build de produção
 
-🎯 Como Funciona
-1. Visualização do Menu
-Os pratos são organizados em três categorias principais, cada uma com sua cor identificadora:
+```bash
+npm run build
+```
 
-🟡 Entradas (Âmbar)
-🔴 Massas (Rose)
-🟣 Sobremesas (Violeta)
-2. Seleção de Pratos
-Clique em qualquer prato para abrir o modal de detalhes com:
+### Visualizar build
 
-Descrição completa
-Opções de adicionais
-Níveis de tempero (quando disponível)
-Preferências alimentares
-Ajuste de quantidade
-3. Montagem do Pedido
-O carrinho lateral mostra:
+```bash
+npm run preview
+```
 
-Todos os itens selecionados
-Quantidades individuais
-Subtotal e total de adicionais
-Valor total do pedido
-4. Gerenciamento
-Você pode:
+## Acesso à Configuração
 
-Aumentar/diminuir quantidades
-Remover itens
-Ver atualizações em tempo real
-🎨 Paleta de Cores
-/* Cores Principais */
-Background: #0a0a0a (Preto profundo)
-Surface: #171717 (Cinza escuro)
-Text: #fafaf9 (Branco quente)
-Primary: #f59e0b (Âmbar)
-Secondary: #a3a3a3 (Cinza médio)
+O projeto possui uma área de configuração para editar pratos.
 
-/* Cores de Categoria */
-Entradas: #f59e0b (Âmbar)
-Massas: #f43f5e (Rose)
-Sobremesas: #8b5cf6 (Violeta)
+- Abra a aba **Configuração** na interface
+- Use a senha padrão: `1234`
+- Depois de desbloquear, você pode:
+  - adicionar novos pratos
+  - editar pratos existentes
+  - excluir itens
+  - alterar a senha de acesso
 
-📱 Responsividade
-O projeto foi desenvolvido com abordagem mobile-first e é totalmente responsivo:
+## Como Editar os Pratos
 
-📱 Mobile: < 768px
-💻 Tablet: 768px - 1024px
-🖥️ Desktop: > 1024px
-🤝 Contribuindo
-Contribuições são sempre bem-vindas! Sinta-se à vontade para:
+Os pratos iniciais ficam em:
 
-Fazer um Fork do projeto
-Criar uma Branch para sua feature (git checkout -b feature/NovaFuncionalidade)
-Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
-Push para a Branch (git push origin feature/NovaFuncionalidade)
-Abrir um Pull Request
-📝 Melhorias Futuras
-[ ] Integração com WhatsApp para envio de pedidos
-[ ] Sistema de favoritos
-[ ] Filtros por preferências alimentares
-[ ] Modo claro/escuro
-[ ] Integração com sistema de pagamento
-[ ] Painel administrativo para edição do cardápio
-[ ] Suporte a múltiplos idiomas
-📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+```bash
+src/data/menuItems.js
+```
 
-👤 Autor
-Seu Nome
+Mas, depois de rodar a aplicação, as alterações feitas na interface administrativa são salvas no navegador via `localStorage`.
 
-GitHub: https://github.com/seu-usuario
-LinkedIn: https://linkedin.com/in/seu-perfil
-Email: seu.email@example.com
-🙏 Agradecimentos
-Ao meu amigo pela oportunidade de desenvolver este projeto
-À comunidade open-source pelas ferramentas incríveis
-A você que está lendo isso! ⭐
-⭐ Se este projeto te ajudou, deixe uma estrela!
-Feito com ❤️ para a Gastronomia Sonho
+Se quiser voltar ao cardápio original, basta limpar os dados salvos do navegador.
 
-🎯 Arquivo LICENSE (MIT)
-Crie um arquivo chamado LICENSE na raiz:
+## Fluxo da Aplicação
 
-MIT License
+1. O cliente visualiza o menu por categoria.
+2. Ao abrir um prato, pode escolher quantidade, adicionais e tempero.
+3. O item é adicionado ao carrinho com total atualizado.
+4. O pedido pode ser enviado via WhatsApp.
+5. O administrador pode abrir a configuração e editar os pratos.
 
-Copyright (c) 2026 [Karla Castro]
+## Personalização
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+O projeto pode ser ajustado facilmente em:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- `src/data/menuItems.js` para os pratos iniciais
+- `src/App.jsx` para regras da interface e comportamento
+- `src/styles.css` para visual e responsividade
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## Próximos Passos Sugeridos
+
+- exportar/importar cardápio em JSON
+- sincronizar os pratos com um backend real
+- criar autenticação mais segura para o painel
+- adicionar upload de imagem dos pratos
+- integrar com banco de dados
+
+## Licença
+
+Projeto sob licença MIT.
+
+## Autor
+
+Desenvolvido para **Gastronomia Sonho**.

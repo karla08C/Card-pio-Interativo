@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.env.local
+src/node_modules/
+src/package-lock.json
+src/package.json

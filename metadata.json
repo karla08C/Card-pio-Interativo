@@ -1,0 +1,8 @@
+{
+  "name": "Gastronomia Sonho - Cardápio Digital",
+  "description": "Cardápio digital interativo da Gastronomia Sonho com personalização de enquadramento de imagens, modos de visualização, compressão automática e pedidos via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

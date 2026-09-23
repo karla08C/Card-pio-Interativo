@@ -96,6 +96,7 @@ O projeto possui uma área de configuração para editar pratos.
   - editar pratos existentes
   - excluir itens
   - alterar a senha de acesso
+  - adicionar upload de imagem dos pratos
 
 ## Como Editar os Pratos
 
@@ -130,7 +131,6 @@ O projeto pode ser ajustado facilmente em:
 - exportar/importar cardápio em JSON
 - sincronizar os pratos com um backend real
 - criar autenticação mais segura para o painel
-- adicionar upload de imagem dos pratos
 - integrar com banco de dados
 
 ## Licença

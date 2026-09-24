@@ -1,8 +1,15 @@
-#  Cardápio Digital Interativo
+# 🍽️ Cardápio Digital Interativo
 
-Cardápio digital da **Gastronomia Sonho** desenvolvido com **React + Vite**. O projeto permite visualizar pratos, personalizar pedidos, acompanhar o carrinho em tempo real e acessar uma área de configuração para editar os itens do cardápio.
+[![Deploy to GitHub Pages](https://github.com/karla08C/Card-pio-Interativo/actions/workflows/deploy.yml/badge.svg)](https://github.com/karla08C/Card-pio-Interativo/actions/workflows/deploy.yml)
+[![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Visão Geral
+> Cardápio digital interativo da **Gastronomia Sonho**, desenvolvido com **React + Vite**. O projeto permite visualizar pratos, personalizar pedidos, acompanhar o carrinho em tempo real, enviar o pedido pronto para o WhatsApp e acessar uma área administrativa com senha para gerenciar os itens do cardápio.
+
+🔗 **[Acessar Demonstração Online (Live Demo)](https://karla08c.github.io/Card-pio-Interativo/)**
+
+---
 
 Esta aplicação foi pensada para atender o fluxo de um restaurante pequeno ou médio, com foco em:
 

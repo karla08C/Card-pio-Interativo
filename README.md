@@ -5,145 +5,116 @@
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> Cardápio digital interativo da **Gastronomia Sonho**, desenvolvido com **React + Vite**. O projeto permite visualizar pratos, personalizar pedidos, acompanhar o carrinho em tempo real, enviar o pedido pronto para o WhatsApp e acessar uma área administrativa com senha para gerenciar os itens do cardápio.
+> Cardápio digital e interativo com catálogo responsivo, personalização de pratos, cálculo de extras em tempo real, checkout integrado via WhatsApp e painel administrativo para gestão de produtos.
 
 🔗 **[Acessar Demonstração Online (Live Demo)](https://karla08c.github.io/Card-pio-Interativo/)**
 
 ---
 
-Esta aplicação foi pensada para atender o fluxo de um restaurante pequeno ou médio, com foco em:
+## 🎯 Visão Geral
+Aplicação desenvolvida com foco em alta conversão e agilidade de atendimento para restaurantes, hamburguerias e confeitarias de pequeno a médio porte:
+- **Experiência do Cliente:** Navegação fluida, filtros por categoria, personalização de ingredientes e envio do pedido estruturado diretamente no WhatsApp.
+- **Experiência do Administrador:** Painel de gestão protegido por senha para cadastrar novos pratos, alterar preços, atualizar descrições e subir imagens otimizadas sem precisar mexer no código.
+- **Sem Dependência de Backend:** Toda a gestão e pedidos persistem diretamente no navegador via `localStorage`.
 
-- navegação rápida pelo cardápio
-- personalização de pedidos
-- envio do pedido via WhatsApp
-- painel de configuração para edição dos pratos
-- persistência local das alterações no navegador
+---
 
-## Funcionalidades
+## ⚡ Funcionalidades em Destaque
 
-- Catálogo com categorias: entradas, massas e sobremesas
-- Modal de detalhes com adicionais, quantidade e nível de tempero
-- Carrinho lateral com subtotal, extras e total geral
-- Envio do pedido via WhatsApp
-- Painel de configuração com senha para editar pratos
-- Cadastro, edição e exclusão de itens do cardápio
-- Salvamento automático em `localStorage`
-- Interface responsiva para desktop e mobile
+### 🛍️ Para o Cliente
+- **Catálogo Organizado por Categorias:** Entradas, Massas, Bebidas e Sobremesas.
+- **Alternância de Visualização:** Modo Grade (Cards visuais) e Modo Lista (rápida navegação).
+- **Filtros e Tags:** Identificação visual para *Mais Pedidos*, *Vegetariano*, *Sem Glúten* e *Sem Lactose*.
+- **Modal de Personalização:** Seleção de adicionais com valores somados ao vivo, quantidade e nível de tempero (*Suave*, *Médio* ou *Ardido*).
+- **Carrinho Lateral:** Totalizador automático e fechamento de pedido com mensagem pronta para envio no WhatsApp.
 
-## Tecnologias Utilizadas
+### ⚙️ Painel de Gestão (Admin)
+- **Acesso Seguro:** Área restrita por senha (padrão: `1234`), com opção de alteração de senha a qualquer momento.
+- **CRUD Completo:** Adicionar novos pratos, editar ingredientes, alterar valores e excluir itens.
+- **Processamento de Fotos com Canvas API:** Upload local com compressão automática, padronização de aspect ratio (16:10) e ajuste de enquadramento/zoom.
+- **Restauração de Dados:** Opção para resetar o cardápio aos valores padrão originais a qualquer momento.
 
-- **React 18**
-- **Vite**
-- **JavaScript (ES6+)**
-- **CSS3**
-- **localStorage** para persistência local
+---
 
-## Estrutura do Projeto
+## 🛠️ Tecnologias Utilizadas
+- **Frontend:** React 18
+- **Build Tool:** Vite
+- **Ícones:** Lucide React
+- **Estilização:** CSS3 Moderno (Layouts responsivos com CSS Grid e Flexbox)
+- **APIs Web Nativas:** HTML5 Canvas (compressão de imagens) e LocalStorage API (persistência de estado)
+- **CI/CD:** GitHub Actions com deploy automatizado no GitHub Pages
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```bash
-cardapio-digital/
-├── index.html
-├── package.json
-├── vite.config.js
-├── README.md
+Card-pio-Interativo/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml        # Pipeline de CI/CD para GitHub Pages
+├── dist/                     # Build de produção gerado pelo Vite
+├── public/                   # Recursos estáticos
 ├── src/
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── styles.css
-│   └── data/
-│       └── menuItems.js
-└── node_modules/
+│   ├── data/
+│   │   └── menuItems.js      # Catálogo inicial de produtos e categorias
+│   ├── App.jsx               # Lógica principal, carrinho e painel admin
+│   ├── main.jsx              # Ponto de entrada React
+│   └── styles.css            # Estilização global e componentes responsivos
+├── index.html                # Template HTML com meta tags
+├── package.json              # Dependências e scripts do projeto
+└── vite.config.js            # Configuração do Vite com base path do GitHub Pages
 ```
 
-## Como Executar
+---
+
+## 💻 Como Executar Localmente
 
 ### Pré-requisitos
+- Node.js (versão 18 ou superior)
+- npm
 
-- Node.js instalado
-- npm instalado
-
-### Instalação
-
+### Passo a passo
 ```bash
+# Clone o repositório
+git clone https://github.com/karla08C/Card-pio-Interativo.git
+
+# Acesse a pasta do projeto
+cd Card-pio-Interativo
+
+# Instale as dependências
 npm install
-```
 
-### Desenvolvimento
-
-```bash
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
+Acesse `http://localhost:5173/` no seu navegador.
 
-A aplicação ficará disponível em:
+---
 
-```bash
-http://localhost:5173/
-```
+## 🔐 Acesso à Configuração
+1. Na barra superior ou no rodapé da página, clique na aba **Configuração**.
+2. Digite a senha padrão: `1234`.
+3. Pronto! O menu ficará em modo de edição com permissão para gerenciar pratos e fotos.
 
-### Build de produção
+---
 
-```bash
-npm run build
-```
+## 🔮 Próximas Evoluções Planejadas
+- [ ] Exportação e importação do catálogo em formato JSON.
+- [ ] Integração com backend (Node.js/Express ou Firebase/Supabase) para sincronização multiusuário.
+- [ ] Emissão de comprovante em PDF e impressão térmica de comanda.
 
-### Visualizar build
+---
 
-```bash
-npm run preview
-```
+## 👩‍💻 Autora
 
-## Acesso à Configuração
+Desenvolvido por **Karla Castro**  
+*Gestora de Comunidade Tech & Desenvolvedora de Software*
 
-O projeto possui uma área de configuração para editar pratos.
+- **LinkedIn:** [linkedin.com/in/karlaj-castro](https://www.linkedin.com/in/karlaj-castro/)
+- **GitHub:** [@karla08C](https://github.com/karla08C)
 
-- Abra a aba **Configuração** na interface
-- Use a senha padrão: `1234`
-- Depois de desbloquear, você pode:
-  - adicionar novos pratos
-  - editar pratos existentes
-  - excluir itens
-  - alterar a senha de acesso
-  - adicionar upload de imagem dos pratos
+---
 
-## Como Editar os Pratos
-
-Os pratos iniciais ficam em:
-
-```bash
-src/data/menuItems.js
-```
-
-Mas, depois de rodar a aplicação, as alterações feitas na interface administrativa são salvas no navegador via `localStorage`.
-
-Se quiser voltar ao cardápio original, basta limpar os dados salvos do navegador.
-
-## Fluxo da Aplicação
-
-1. O cliente visualiza o menu por categoria.
-2. Ao abrir um prato, pode escolher quantidade, adicionais e tempero.
-3. O item é adicionado ao carrinho com total atualizado.
-4. O pedido pode ser enviado via WhatsApp.
-5. O administrador pode abrir a configuração e editar os pratos.
-
-## Personalização
-
-O projeto pode ser ajustado facilmente em:
-
-- `src/data/menuItems.js` para os pratos iniciais
-- `src/App.jsx` para regras da interface e comportamento
-- `src/styles.css` para visual e responsividade
-
-## Próximos Passos Sugeridos
-
-- exportar/importar cardápio em JSON
-- sincronizar os pratos com um backend real
-- criar autenticação mais segura para o painel
-- integrar com banco de dados
-
-## Licença
-
-Projeto sob licença MIT.
-
-## Autor
-
-Desenvolvido para **Gastronomia Sonho**.
+## 📄 Licença
+Distribuído sob a licença **MIT**. Consulte `LICENSE` para mais informações.
